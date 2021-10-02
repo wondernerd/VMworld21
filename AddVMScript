@@ -1,0 +1,1 @@
+python3 /home/tony/Documents/VMworld21/Add_VM.py -s 192.168.129.50 -u VMworld21@wondernerd.local -p "VMware-1" -nossl -v "VMworld New VM" --datacenter-name "GPU Lab" --datastore-name "General VMs" --esx-ip esxi07.wondernerd.local
