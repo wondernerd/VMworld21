@@ -15,6 +15,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#Original file found at: https://github.com/vmware/pyvmomi-community-samples
+#You will need to add the tools to your root directory for this to work
+#and you will need to call it as a function. 
+#This is only provided as one way to create a VM with a vGPU.
+
 """
 Example for creating a VM
 """
@@ -61,6 +66,7 @@ def create_config_spec(datastore_name, name, memory=4, guest="otherGuest",
     config.numCPUs = cpus
 
     #Add vGPU to VM
+    #This is the only modification to this file
     config.deviceChange = [vim.VirtualDeviceConfigSpec()]
     config.deviceChange[0].operation = 'add'
     config.deviceChange[0].device = vim.VirtualPCIPassthrough()
